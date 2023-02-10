@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocador de cor dinâmico</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        body{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: white;
+            font-family: 'Poppins';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 48px;
+        }
+
+        label{
+            font-size: 22px;
+        }
+
+        input{
+            padding: 6px;
+            border-radius: 6px;
+            border-color: black;
+            font-size: 16px;
+            color: black;
+        }
+
+        #seletordetipo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button{
+            padding: 8px 32px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0px 40px;
+            color: black;
+            border: 2px black solid;
+            border-radius: 6px;
+            background-color: transparent;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #campoRGB{
+            display: none;
+            margin: 60px 0px;
+        }
+
+        #campoHEX{
+            display: none;
+            margin: 60px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolha um formato</h1>
+    <div id="seletordetipo">
+        <div>
+            <button id="rgb">RGB</button>
+            <button id="hex">HEX</button>
+        </div>
+    </div>
+    <div id="campoRGB">
+        <label for="corRGB">RGB: </label>
+        <input type="number" min="0" minlength="0" maxlength="3" max="255" placeholder="red" id="rgb1">
+        .
+        <input type="number" min="0" maxlength="3" max="255" placeholder="green" id="rgb2">
+        .
+        <input type="number" min="0" maxlength="3" max="255" placeholder="blue" id="rgb3">
+    </div>
+    <div id="campoHEX">
+        <label for="corHEX">HEX: #</label>
+        <input type="text" minlength="0" maxlength="6" placeholder="ex: fff" id="hexinput">
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
